@@ -1,0 +1,66 @@
+/*----------------------------------------
+  General Layout Style
+------------------------------------------*/
+
+html,
+body {
+  height: 100%;
+}
+
+.sh-ui-main {
+  min-height: calc(100% - 100px);
+  padding-left: $sidenav-expanded-width;
+  -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.sh-ui-container {
+  padding: 0 0.5rem;
+  margin: 0 auto;
+  max-width: 100% !important;
+  width: 98%;
+}
+
+footer {
+  padding-left: $sidenav-expanded-width;
+  &.page-footer {
+    padding-top: 1px;
+
+    .footer-copyright {
+      overflow: hidden;
+      align-items: center;
+      padding: 6px 0px;
+      color: $footer-copyright-font-color;
+      background-color: $footer-copyright-bg-color;
+    }
+  }
+}
+
+@media #{$medium-and-up} {
+  .sh-ui-main {
+    .sh-ui-container {
+      width: 98%;
+    }
+  }
+}
+@media #{$large-and-up} {
+  .sh-ui-main {
+    .sh-ui-container {
+      width: 98%;
+    }
+  }
+}
+
+@media only screen and(max-width: 993px) {
+  .sh-ui-main {
+    padding-left: 0;
+  }
+  footer {
+    padding-left: 0;
+  }
+}

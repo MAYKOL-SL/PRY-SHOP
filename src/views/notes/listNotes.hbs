@@ -1,0 +1,109 @@
+{{!-- {{#if alert}}
+<div>
+    <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content alert-simple alert-success alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">check_circle</i>
+                <strong class="sh-ui-alert__text-bold">Well done!</strong> You successfullyread this important.
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}} --}}
+
+<div class="row sh-ui-mt-1">
+    <nav class="sh-ui-gradient-45deg-deep-purple-blue">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo sh-ui-ml-1"><i class="material-icons">view_list</i>List Notes</a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class="waves-effect waves-light modal-trigger" href="/api/shop/notes/add">
+                        <i class="material-icons sh-ui-icon-animation">add_circle</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="divider"></div>
+
+<div class="row">
+    {{#each data}}
+    <div class="col s12 m6 l4">
+        <div class="card hoverable sh-ui-notes">
+            <div class="sh-ui-gradient-45deg-blue-indigo-transparent">
+                <div class="card-content white-text">
+                    <span class="card-title">
+                        {{title}}
+                        <a class="white-text" href="notes/edit/{{id}}">
+                            <i class="material-icons sh-ui-icon-animation right">edit</i>
+                        </a>
+                        <a class="white-text" href="notes/delete/{{id}}">
+                            <i class="material-icons sh-ui-icon-animation right">delete</i>
+                        </a>
+                    </span>
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="sh-ui-message sh-ui-gradient-45deg-deep-purple-blue">
+        <div class="l12">
+            <div class="sh-ui-message__content">
+                <div class="sh-ui-message__title">There are not notes yet</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+<!-- Modal Structure -->
+{{!-- <div id="modal1" class="modal modal-fixed-footer sh-ui-border-radius-10">
+    {{#each errors}}
+    
+    {{/each}}
+
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+
+        <div class="row">
+            <form class="col s12" action="/api/shop/notes/new-note" method="POST">
+                <div class="row">
+
+                    <div class="input-field col l12">
+                        <input id="title" type="text" class="validate" name="title">
+                        <label for="title">Title</label>
+                    </div>
+
+                    <div class="input-field col l12">
+                        <textarea id="description" class="materialize-textarea" name="description"></textarea>
+                        <label for="description">Description</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="sh-ui-card__position-button">
+                            <div class="col s4 offset-s2">
+                                <button
+                                    class="btn waves-effect waves-light sh-ui-gradient-45deg-blue-indigo sh-ui-border-radius-10"
+                                    type="submit" name="action">Save
+                                    <i class="material-icons right">save</i>
+                                </button>
+                            </div>
+                            <div class="col s4 offset-s2">
+                                <a href="/api/shop/notes"
+                                    class="btn waves-effect waves-light sh-ui-gradient-45deg-red-pink sh-ui-border-radius-10"
+                                    type="submit" name="action">Cancel
+                                    <i class="material-icons right">cancel</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div> --}}

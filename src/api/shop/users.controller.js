@@ -1,10 +1,11 @@
 
 function getUsersSignin(req, res) {
-    res.send('signin'); //httpStatus.OK
+    res.render('users/signin');
+    //res.send('signin'); //httpStatus.OK
 }
 
 function getUserSignup(req, res) {
-    res.send('signup'); //httpStatus.OK
+    res.render('users/signup'); //httpStatus.OK
 }
 
 module.exports = {

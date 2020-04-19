@@ -1,0 +1,111 @@
+{{#each errors}}
+<div>
+    {{!-- <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content alert-simple alert-success alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">check_circle</i>
+                <strong class="sh-ui-alert__text-bold">Well done!</strong> You successfullyread this important.
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content alert-simple alert-info alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">info</i>
+                <strong class="sh-ui-alert__text-bold">Heads up!</strong> This alert needs your attention, but it's not
+                super
+                important.
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content alert-simple alert-warning alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">warning</i>
+                <strong class="sh-ui-alert__text-bold">Warning!</strong> Better check yourself, you're not looking too
+                good.
+            </div>
+        </div>
+    </div>--}}
+
+    <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content alert-simple alert-danger alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">cancel</i>
+                <strong class="sh-ui-alert__text-bold">Oh snap!</strong> {{text}}
+                again.
+            </div>
+        </div>
+    </div>
+
+    {{!-- <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content fade alert-simple alert-primary alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">thumb_up</i>
+                <strong class="sh-ui-alert__text-bold">Well done!</strong> You successfullyread this important.
+            </div>
+        </div>
+    </div> --}}
+</div>
+{{/each}}
+<!--START CONTENT FORM-->
+
+<div class="row sh-ui-mt-1">
+    <nav class="sh-ui-gradient-45deg-deep-purple-blue">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo sh-ui-ml-1"><i class="material-icons">view_list</i>New Note</a>            
+        </div>
+    </nav>
+</div>
+<div class="divider"></div>
+
+<div class="row">
+    <div class="col s6 offset-s3">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <form class="col s12" action="/api/shop/notes/new-note" method="POST">
+                        <div class="row">
+
+                            <div class="input-field col l12">
+                                <input id="title" type="text" class="validate" name="title">
+                                <label for="title">Title</label>
+                            </div>
+
+                            <div class="input-field col l12">
+                                <textarea id="description" class="materialize-textarea" name="description"></textarea>
+                                <label for="description">Description</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="sh-ui-card__position-button">
+                                    <div class="col s4 offset-s2">
+                                        <button class="btn waves-effect waves-light sh-ui-gradient-45deg-blue-indigo"
+                                            type="submit" name="action">Save
+                                            <i class="material-icons right">save</i>
+                                        </button>
+                                    </div>
+                                    <div class="col s4 offset-s2">
+                                        <a href="/api/shop/notes" class="btn waves-effect waves-light sh-ui-gradient-45deg-red-pink"
+                                            type="submit" name="action">Cancel
+                                            <i class="material-icons right">cancel</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--END CONTENT FORM-->

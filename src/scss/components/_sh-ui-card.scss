@@ -1,0 +1,29 @@
+/*----------------------------------------
+Cards
+------------------------------------------*/
+
+.card {
+  overflow: hidden;
+}
+
+.sh-ui-card {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+
+  &__img:hover {
+    transform: scale(1.1);
+  }
+
+  &__found {
+    background: rgba(41, 22, 230, 0.74) none repeat scroll 0% 0% / auto
+      padding-box border-box !important;
+  }
+
+  &__position-button {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,31 @@
+.sh-ui-main {
+
+  .sidenav {
+    width: $sidenav-expanded-width;
+    -webkit-transition: .3s ease all;
+      -o-transition: .3s ease all;
+      -moz-transition: .3s ease all;
+      transition: .3s ease all;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+  }    
+
+  .sh-ui-sidebar-nav {
+    position: fixed;
+    width: 100px;
+    left: 180px;
+    z-index: 999;
+    height: auto;
+
+    &__side-navigation {
+      top: 64px;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    & li>a {
+      padding: 0 16px;
+    }
+  }
+}
