@@ -1,0 +1,91 @@
+<div class="sh-ui-main">
+    <div class="wrapper">
+        {{> sidebar }}
+    </div>
+    <div class="sh-ui-container">
+        {{> alertsMsg}}
+        <!--START CONTENT FORM-->
+        <div class="row sh-ui-mt-1">
+            <nav class="sh-ui-gradient-45deg-deep-purple-blue">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo sh-ui-ml-1"><i class="material-icons">view_list</i>New Contact</a>
+                </div>
+            </nav>
+        </div>
+        <div class="divider"></div>
+
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <form class="col s12" action="/contact/new-contact" method="POST">
+                                <div class="row">
+
+                                    <div class="input-field col l12">
+                                        <input id="name" type="text" class="validate" name="first_name">
+                                        <label for="name">First name</label>
+                                    </div>
+                                    <div class="input-field col l12">
+                                        <input id="bran" type="text" class="validate" name="last_name">
+                                        <label for="bran">Last name</label>
+                                    </div>
+                                    <div class="input-field col l12">
+                                        <input id="price" type="email" class="validate" name="email">
+                                        <label for="price">Email</label>
+                                    </div>
+                                    <div class="input-field col l12">
+                                        <input id="color" type="text" class="validate" name="image">
+                                        <label for="color">Link image</label>
+                                    </div>
+                                    <div class="input-field col l12">
+                                        <input id="color" type="text" class="validate" name="website">
+                                        <label for="color">Web site</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <select name="rol">
+                                            {{#each listRol}}
+                                            <option value="{{id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                        <label>Rol</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <select name="city">
+                                            {{#each listCity}}
+                                            <option value="{{id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                        <label>City</label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="sh-ui-card__position-button">
+                                            <div class="col s4 offset-s2">
+                                                <button
+                                                    class="btn waves-effect waves-light sh-ui-gradient-45deg-blue-indigo"
+                                                    type="submit" name="action">Save
+                                                    <i class="material-icons right">save</i>
+                                                </button>
+                                            </div>
+                                            <div class="col s4 offset-s2">
+                                                <a href="/contacts"
+                                                    class="btn waves-effect waves-light sh-ui-gradient-45deg-red-pink"
+                                                    type="submit" name="action">Cancel
+                                                    <i class="material-icons right">cancel</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END CONTENT FORM-->
+{{> footer }}

@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap");
 /////////////////////////
 //stiles header
 /////////////////////////
-.sh-ui-navbar{
-    
+.sh-ui-navbar {
   &__icon {
     display: initial !important;
     margin: 0 0 !important;
-  } 
+  }
 
   &__content {
     margin: 0;
@@ -19,7 +18,7 @@
     line-height: 17px !important;
   }
 
-  & a:hover{
+  &__not-hover:hover {
     background-color: inherit !important;
   }
 
@@ -29,23 +28,77 @@
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
-  
-    img{
-    height: 31px;
+
+    img {
+      height: 31px;
     }
   }
-  
-  &__logo-text{
+
+  &__logo-text {
     font-size: 34px;
     padding-left: 8px;
     visibility: visible;
     opacity: 1;
     transition: opacity 0.2s linear;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
   }
+
+  &__avatar-status {
+    position: relative;
+    display: inline-block;
+    height: 55px;
+    width: 28px;
+    white-space: nowrap;
+    border-radius: 1000px;
+    vertical-align: bottom;
+
+    & img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      background: #e6e6e6;
+      border: 0 none;
+      border-radius: 1000px;
+    }
+
+    & i {
+      position: absolute;
+      right: -2px;
+      bottom: 18px;
+      width: 9px !important;
+      height: 9px !important;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      background-color: #00e676;
+    }
+  }
+
+  &__dropdown {
+    width: 142px !important;
+    left: 90% !important;
+    top: 64px !important;
+    height: 100px !important;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 20px;
+    font-family: "Nexa";
+    font-weight: bold;
+    transition: all 500ms ease;    
+  }
+
+  &__hover:hover {
+    background: #F56F3A;
+    border-radius: 50px
+  }
+    
 }
 
 ////////////////////////
 // mediquerys
 ////////////////////////
-

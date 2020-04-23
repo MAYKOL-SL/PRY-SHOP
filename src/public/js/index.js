@@ -25,3 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
   var instance = M.Modal.init(Modalelem);
   instance.close();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  var dropdownOptions = {
+    'closeOnClick': true,
+    'hover':true
+}
+  var instances = M.Dropdown.init(elems, dropdownOptions);
+});
+
+// $('.dropdown-trigger').dropdown();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems);
+});
+

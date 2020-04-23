@@ -14,16 +14,7 @@
 
 <body>
     {{> header }}
-    <div class="sh-ui-main">
-        <div class="wrapper">
-            {{> sidebar }}
-        </div>
-        <div class="sh-ui-container">
-            {{> alertsMsg}}
-            {{{body}}}
-        </div>
-    </div>
-    {{> footer }}
+    {{{body}}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

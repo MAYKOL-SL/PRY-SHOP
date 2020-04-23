@@ -5,19 +5,66 @@
             <div class="nav-wrapper">
                 <ul class="left">
                     <li>
-                        <a href="#" data-target="slide-out" class="sidenav-trigger sh-icon">
+                        <a href="#" data-target="slide-out" class="sidenav-trigger sh-ui-navbar__not-hover">
                             <i class="material-icons">menu</i>
                         </a>
                     </li>
                     <li>
                         <h1 class="sh-ui-navbar__content">
-                            <a href="index.html" class="sh-ui-navbar__logo brand-logo darken-1 hide-on-medium-and-up">
+                            <a href="/" class="sh-ui-navbar__logo brand-logo darken-1 hide-on-medium-and-up sh-ui-navbar__not-hover">
                                 <img src="/images/logo/logo-shop.png" alt="logo">
                                 <span class="sh-ui-navbar__logo-text hide-on-med-and-down">Shop</span>
                             </a>
                         </h1>
                     </li>
                 </ul>
+                {{#if user}}
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="javascript:void(0);" class="dropdown-trigger waves-effect waves-block sh-ui-navbar__not-hover"
+                            data-target='profile-dropdown'>
+                            <span class="sh-ui-navbar__avatar-status avatar-online">
+                                <img src="/images/avatar/Deafult-Profile.png" alt="avatar">
+                                <i></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                {{else}}
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a class="sh-ui-navbar__link" href="/users/signin">Sign In</a>
+                    </li>
+                    {{!-- <li>
+                        <a class="sh-ui-navbar__link sh-ui-mr-4" href="/users/signup">Sign Up</a>
+                    </li> --}}
+                </ul>
+                {{/if}}
+                <!-- profile-dropdown -->
+                <ul id="profile-dropdown" class="dropdown-content sh-ui-navbar__dropdown">
+                    <li>
+                        <a href="/user/profile" class="grey-text text-darken-1 ">
+                            <i class="material-icons">face</i> Profile</a>
+                    </li>
+                    {{!-- <li>
+                        <a href="#" class="grey-text text-darken-1">
+                            <i class="material-icons">settings</i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="grey-text text-darken-1">
+                            <i class="material-icons">live_help</i> Help</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" class="grey-text text-darken-1">
+                            <i class="material-icons">lock_outline</i> Lock</a>
+                    </li> --}}
+                    <li>
+                        <a href="/users/logout" class="grey-text text-darken-1">
+                            <i class="material-icons">keyboard_tab</i> Logout</a>
+                    </li>
+                </ul>
+
             </div>
         </nav>
     </div>

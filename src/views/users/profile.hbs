@@ -1,0 +1,39 @@
+<div class="sh-ui-main">
+    <div class="wrapper">
+        {{> sidebar }}
+    </div>
+    <div class="sh-ui-container">
+        <div class="row">
+            <div class="col l4 offset-l4">
+                <div class="row">
+                    <div class="card sh-ui-profile">
+                        <div class="card-content white-text">
+                            <div class="center-align">
+                                <img src="/images/avatar/avatar-7.png" alt="">
+                            </div>
+                            <div class="sh-ui-sign__profile center-align">
+                                <h1>Profile</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col l4">
+                                    <strong>Name:</strong>
+                                </div>
+                                <div class="col l8">
+                                    <span class="left-align">{{user.username}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col l4">
+                                    <strong>Email:</strong>
+                                </div>
+                                <div class="col l8">
+                                    <span class="left-align">{{user.email}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

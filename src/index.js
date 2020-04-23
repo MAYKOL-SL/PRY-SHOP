@@ -1,4 +1,3 @@
-//INITIALIZATION
 let express = require("express");
 let cors = require("cors");
 let bodyParser = require("body-parser");
@@ -6,13 +5,14 @@ let path = require("path");
 let exphbs = require("express-handlebars");
 let methodOverride = require("method-override");
 let session = require("express-session");
-let mysql = require("mysql");
-let connection = require("express-myconnection");
 let flash = require("connect-flash");
+let passport = require("passport");
 
+//INITIALIZATION
 var app = express();
 var router = express.Router();
-var config = require("./database");
+require("./lib/passport");
+
 //SETTING
 app.use(cors());
 
@@ -31,7 +31,7 @@ app.set("view engine", ".hbs");
 
 //MIDDLEWARE
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(methodOverride("_method")); // enviar otros tipos de metodos
 app.use(
   session({
@@ -40,12 +40,12 @@ app.use(
     saveUninitialized: true
   })
 );
-
+app.use(passport.initialize());
+app.use(passport.session());
 //enviar mensajes entre multiples vistas
 app.use(flash());
 
-app.use(connection(mysql, config.dbOptions, "single"));
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: false }));
 
 router.use(function(req, res, next) {
   console.log("Something is happening.(middleware)");
@@ -56,6 +56,7 @@ router.use(function(req, res, next) {
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
+  res.locals.user = req.user;
   next();
 });
 

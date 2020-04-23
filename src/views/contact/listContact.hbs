@@ -1,0 +1,88 @@
+<div class="sh-ui-main">
+    <div class="wrapper">
+        {{> sidebar }}
+    </div>
+    <div class="sh-ui-container">
+        {{> alertsMsg}}
+        <div class="row sh-ui-mt-1">
+            <nav class="sh-ui-gradient-45deg-deep-purple-blue">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo sh-ui-ml-1"><i class="material-icons">view_list</i>List Contacts</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a class="waves-effect waves-light modal-trigger" href="/contact/add">
+                                <i class="material-icons sh-ui-icon-animation">add_circle</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="divider"></div>
+
+        <div class="row">
+            {{#each listContact}}
+            <div class="col l3">
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/images/gallary/fondo.jpg">
+                    </div>
+                    <div class="card-content">
+                        {{#if image}}
+                        <img class="sh-ui-contact__image" src="{{image}}">
+                        {{else}}
+                        <img class="sh-ui-contact__image" src="/images/avatar/Deafult-Profile.png">
+                        {{/if}}
+                        <div class="row sh-ui-mt-6">
+                            <strong class="col l6">Frist Name:</strong>
+                            <samp class="col l6">{{first_name}}</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="col l6">Last Name:</strong>
+                            <samp class="col l6">{{last_name}}</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="col l12">Email:</strong>
+                            <samp class="col l12 sh-ui-mt-6">{{email}}</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="col l12">Web Site:</strong>
+                            <samp class="col l12 sh-ui-mt-6">{{website}}</samp>
+                        </div>
+
+                        <div class="row">
+                            <div class="sh-ui-card__position-button">
+                                <div class="col l6">
+                                    <a href="contact/edit/{{id}}"
+                                        class="btn waves-effect waves-light sh-ui-gradient-45deg-blue-indigo">Update
+                                        <i class="material-icons right">update</i>
+                                    </a>
+                                </div>
+                                <div class="col l6">
+                                    <a href="contact/delete/{{id}}"
+                                        class="btn waves-effect waves-light sh-ui-gradient-45deg-red-pink">Delete
+                                        <i class="material-icons right">delete</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            {{else}}
+            <div class="sh-ui-message sh-ui-gradient-45deg-deep-purple-blue">
+                <div class="l12">
+                    <div class="sh-ui-message__content">
+                        <div class="sh-ui-message__title">There are not notes yet</div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+{{> footer }}

@@ -54,3 +54,22 @@
     </div> --}}
 </div>
 {{/if}}
+
+{{#if error_msg}}
+<div>
+    <div class="col s12 sh-ui-mt-1">
+        <div class="sh-ui-alert hoverable">
+            <div class="sh-ui-alert__content alert-simple alert-danger alert-dismissible text-left">
+                <i class="material-icons sh-ui-close sh-ui-icon-animation closebtn">close</i>
+                <i class="material-icons sh-ui-alert__start-icon sh-ui-icon-animation">cancel</i>
+                <strong class="sh-ui-alert__text-bold">Oh snap!</strong>
+                <div class="center-align">
+                    {{#each error_msg}}
+                    <li>{{this.text}}</li>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

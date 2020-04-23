@@ -1,23 +1,24 @@
 @charset "UTF-8";
 
-@import 'base/sh-ui-color';
-@import 'base/sh-ui-variables';
-@import 'base/sh-ui-base';
-@import 'base/sh-ui-gradient';
-@import 'base/sh-ui-helper';
+@import "base/sh-ui-color";
+@import "base/sh-ui-variables";
+@import "base/sh-ui-base";
+@import "base/sh-ui-gradient";
+@import "base/sh-ui-helper";
+@import "base/sh-ui-normalize";
 
-@import 'layout/sh-ui-header';
-@import 'layout/sh-ui-footer';
+@import "layout/sh-ui-header";
+@import "layout/sh-ui-footer";
 
-@import 'components/sh-ui-sidenav';
-@import 'components/sh-ui-card';
-@import 'components/sh-ui-alerts';
-@import 'components/sh-ui-notes';
-@import 'components/sh-ui-header-content';
-@import 'components/sh-ui-message';
+@import "components/sh-ui-sidenav";
+@import "components/sh-ui-card";
+@import "components/sh-ui-alerts";
+@import "components/sh-ui-notes";
+@import "components/sh-ui-header-content";
+@import "components/sh-ui-message";
+@import "components/sh-ui-sign-in-up";
+@import "components/sh-ui-profile";
+@import "components/sh-ui-home";
+@import "components/_sh-ui-contact";
 
-@import 'pages/sh-ui-global';
-
-
-
-
+@import "pages/sh-ui-global";

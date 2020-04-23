@@ -1,0 +1,95 @@
+<div class="sh-ui-main">
+    <div class="wrapper">
+        {{> sidebar }}
+    </div>
+    <div class="sh-ui-container">
+        {{> alertsMsg}}
+        <div class="row sh-ui-mt-1">
+            <nav class="sh-ui-gradient-45deg-deep-purple-blue">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo sh-ui-ml-1"><i class="material-icons">view_list</i>List Products</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a class="waves-effect waves-light modal-trigger" href="/product/add">
+                                <i class="material-icons sh-ui-icon-animation">add_circle</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="divider"></div>
+
+        <div class="row">
+            {{#each products}}
+            <div class="col l3">
+                <div class="card sh-ui-card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        {{#if image}}
+                        <img class="activator sh-ui-card__img"
+                            src="{{image}}">
+                        {{else}}
+                        <img class="activator sh-ui-card__img"
+                            src="/images/gallary/product.png">
+                        {{/if}}    
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{name}}
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                    </div>
+                    <div class="card-reveal sh-ui-card__found">
+                        <span class="card-title white-text">{{name}}<i class="material-icons right">close</i></span>
+                        <div class="row sh-ui-mt-6">
+                            <strong class="white-text col l6">Bran:</strong>
+                            <samp class="white-text col l6">{{brand}}.</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="white-text col l6">Price:</strong>
+                            <samp class="white-text col l6">{{price}}.</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="white-text col l6">Size:</strong>
+                            <samp class="white-text col l6">{{size}}.</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="white-text col l6">Color:</strong>
+                            <samp class="white-text col l6">{{color}}.</samp>
+                        </div>
+                        <div class="row">
+                            <strong class="white-text col l12">Description:</strong>
+                            <samp class="white-text col l12 sh-ui-mt-5">{{description}}.</samp>
+                        </div>
+
+                        <div class="row">
+                            <div class="sh-ui-card__position-button">
+                                <div class="col l6">
+                                    <a href="product/edit/{{id}}" class="btn waves-effect waves-light sh-ui-gradient-45deg-blue-indigo">Update
+                                        <i class="material-icons right">update</i>
+                                    </a>
+                                </div>
+                                <div class="col l6">
+                                    <a href="product/delete/{{id}}" class="btn waves-effect waves-light sh-ui-gradient-45deg-red-pink">Delete
+                                        <i class="material-icons right">delete</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <div class="sh-ui-message sh-ui-gradient-45deg-deep-purple-blue">
+                <div class="l12">
+                    <div class="sh-ui-message__content">
+                        <div class="sh-ui-message__title">There are not notes yet</div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+{{> footer }}

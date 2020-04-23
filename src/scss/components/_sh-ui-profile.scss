@@ -1,0 +1,23 @@
+.sh-ui-profile {
+  position: relative;
+  height: 100%;
+  border-radius: 22px;
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 16, 201, 0.8) 0%,
+    rgba(0, 0, 0, 0.87) 100%
+  );
+
+  & img {
+    border: 1px solid #c400d7;
+    border-radius: 50%;
+    padding: 7px;
+    height: 150px;
+    width: 150px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 30% 0% 8%;
+  }
+}

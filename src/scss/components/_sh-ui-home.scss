@@ -1,0 +1,16 @@
+.sh-ui-found {
+  background-image: url("/images/gallary/fondo.jpg");
+}
+
+.sh-ui-home {
+  margin-top: 8%;
+
+  &__img {
+    height: 114px;
+    margin-top: 21px;
+  }
+
+  &__content {
+    height: 412px;
+  }
+}
